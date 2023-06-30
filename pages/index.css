@@ -1,5 +1,9 @@
 @import url(../vendor/normalize.css);
 
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .page {
     min-width: 360px;
     height: 100vh;
