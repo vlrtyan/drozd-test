@@ -263,6 +263,8 @@
 .results {
     margin-top: 58px;
     display: none;
+    /* 100% - header - results margin-top */
+    height: calc(100% - 46px - 58px);
 }
 
 .results__back-button {
@@ -294,7 +296,8 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 177px);
+    /* 100% - results title height */
+    max-height: calc(100% - 73px);
     overflow-y: scroll;
 }
 
