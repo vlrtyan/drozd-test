@@ -89,7 +89,7 @@
 
 .lang-switcher__container {
     width: 180px;
-    padding: 14px 0 6px;
+    padding: 6px 0;
     margin-top: -2px;
     position: absolute;
     border-radius: 2px;
@@ -108,7 +108,7 @@
 }
 
 .lang-switcher__title {
-    margin: 0 auto 8px 17px;
+    margin: 8px auto 8px 17px;
     font-size: 14px;
     font-weight: 600;
     line-height: 24px;
@@ -132,6 +132,13 @@
 .lang_chosen {
     transition: 0.5s;
     background-color: #F1F8FE;
+}
+
+.lang__name {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .lang__flag {
@@ -211,6 +218,7 @@
 }
 
 .navigation__search-button {
+    color: #151617;
     font-size: 22px;
     font-weight: 500;
     line-height: 32px;
@@ -233,6 +241,7 @@
     flex-direction: row;
     align-items: center;
     column-gap: 5px;
+    color: #151617;
     font-size: 22px;
     font-weight: 500;
     line-height: 32px;
@@ -281,6 +290,7 @@
 }
 
 .results__title {
+    color: #151617;
     font-size: 22px;
     font-weight: 500;
     line-height: 32px;

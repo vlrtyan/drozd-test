@@ -27,11 +27,13 @@ const config = {
 };
 
 const openPopup = () => {
-  document.querySelector(".popup").classList.add("popup_opened");
+  config.popup.classList.add("popup_opened");
 };
 
 const closePopup = () => {
-  document.querySelector(".popup").classList.remove("popup_opened");
+  config.popup.classList.remove("popup_opened");
+  hideAllSections();
+  openSection(config.menu);
 };
 
 const openLanguageList = () => {
@@ -78,6 +80,10 @@ const clickSubmenuItem = (e) => {
   openSection(config.results);
 };
 
+// adapt viewport height for mobile browsers
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 config.burgerButton.addEventListener("click", openPopup);
 config.closeButton.addEventListener("click", closePopup);
 config.langButton.addEventListener("click", openLanguageList);
@@ -97,6 +103,3 @@ config.submenuItems.map((item) =>
   item.addEventListener("click", clickSubmenuItem)
 );
 config.languages.map((lang) => lang.addEventListener("click", chooseLanguage));
-
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
