@@ -3,6 +3,7 @@
 .page {
     min-width: 360px;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     margin: auto;
     background-color: white;
     font-family: Arial, sans-serif;
@@ -25,7 +26,7 @@
 }
 
 .popup {
-    height: 100vh;
+    height: 100%;
     position: fixed;
     left: 0;
     right: 0;

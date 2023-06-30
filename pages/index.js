@@ -97,3 +97,6 @@ config.submenuItems.map((item) =>
   item.addEventListener("click", clickSubmenuItem)
 );
 config.languages.map((lang) => lang.addEventListener("click", chooseLanguage));
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
