@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Drozd</title>
+</head>
+
+<body>
+    <div class="page">
+        <main class="content">
+            <button class="burger-button"></button>
+            <div class="popup">
+                <div class="popup__header">
+                    <div class="lang-switcher">
+                        <button class="lang-switcher__button" type="button">
+                            <img class="lang-switcher__lang-flag" src="./images/lang-ru.svg" alt="" />
+                            <p class="lang-switcher__lang-name">Ru</p>
+                            <img class="lang-switcher__icon" src="./images/arrow-down.svg" alt="" />
+                        </button>
+                        <div class="lang-switcher__container">
+                            <p class="lang-switcher__title">Страна</p>
+                            <ul class="lang-switcher__list">
+                                <li class="lang"><img class="lang__flag" src="./images/lang-us.svg" alt="" /><span
+                                        class="lang__name">United States</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                                <li class="lang"><img class="lang__flag" src="./images/lang-nl.svg" alt="" /><span
+                                        class="lang__name">Netherlands</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                                <li class="lang"><img class="lang__flag" src="./images/lang-by.svg" alt="" /><span
+                                        class="lang__name">Беларусь</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                                <li class="lang lang_chosen"><img class="lang__flag" src="./images/lang-ru.svg" alt="" /><span
+                                        class="lang__name">Россия</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                                <li class="lang"><img class="lang__flag" src="./images/lang-kz.svg" alt="" /><span
+                                        class="lang__name">Казахстан</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                                <li class="lang"><img class="lang__flag" src="./images/lang-tr.svg" alt="" /><span
+                                        class="lang__name">Türkiye</span><img class="lang__tick" src="./images/tick.svg" alt="" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="popup__close-button"></button>
+                </div>
+                <section class="menu shown">
+                    <ul class="menu__list">
+                        <li class="menu__item"><span>Services</span><img src="./images/arrow-right.svg" alt="" /></li>
+                        <li class="menu__item"><span>Managed IT</span><img src="./images/arrow-right.svg" alt="" />
+                        </li>
+                        <li class="menu__item"><span>Telecom Solutions</span><img src="./images/arrow-right.svg"
+                                alt="" />
+                        </li>
+                        <li class="menu__item"><span>About Us</span><img src="./images/arrow-right.svg" alt="" /></li>
+                    </ul>
+                    <nav class="navigation">
+                        <a class="navigation__link" href="#">Контакты</a>
+                        <button class="navigation__search-button">Поиск</button>
+                    </nav>
+                </section>
+                <section class="submenu">
+                    <button class="submenu__back-button"><img src="./images/arrow-left.svg" alt="" /><span
+                            class="submenu__title"></span></button>
+                    <ul class="submenu__list">
+                        <li class="submenu__item"><span class="submenu__item-name">Облачные вычисления</span><img
+                                src="./images/arrow-right.svg" alt="" /></li>
+                        <li class="submenu__item"><span class="submenu__item-name">Выделенные серверы</span><img
+                                src="./images/arrow-right.svg" alt="" />
+                        </li>
+                        <li class="submenu__item"><span class="submenu__item-name">Платформенные сервисы</span><img
+                                src="./images/arrow-right.svg" alt="" /></li>
+                        <li class="submenu__item"><span class="submenu__item-name">Информационная безопасность</span><img src="./images/arrow-right.svg" alt="" /></li>
+                    </ul>
+                </section>
+                <section class="results">
+                    <button class="results__back-button"><img src="./images/arrow-left.svg" alt="" /><span
+                            class="results__title"></span></button>
+                    <ul class="results__list">
+                        <li class="result">
+                            <p class="result__name">Cloud consulting</p>
+                            <p class="result__description">Relational database services for MySQL, PostgreSQL, and SQL
+                                server.</p>
+                        </li>
+                        <li class="result">
+                            <p class="result__name">Cloud infrastructure analytics</p>
+                            <p class="result__description">Health-specific solutions to enhance the patient experience.
+                            </p>
+                        </li>
+                        <li class="result">
+                            <p class="result__name">Hybrid Cloud</p>
+                            <p class="result__description">Data storage, AI, and analytics solutions for government
+                                agencies.</p>
+                        </li>
+                        <li class="result">
+                            <p class="result__name">Hybrid Cloud</p>
+                            <p class="result__description">Data storage, AI, and analytics solutions for government
+                                agencies.</p>
+                        </li>
+                        <li class="result">
+                            <p class="result__name">Multicloud</p>
+                            <p class="result__description">Relational database services for MySQL, PostgreSQL, and SQL
+                                server.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="./pages/index.js"></script>
+</body>
+
+</html>
