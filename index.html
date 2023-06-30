@@ -11,66 +11,76 @@
 <body>
     <div class="page">
         <main class="content">
-            <button class="burger-button"></button>
+            <button class="burger-button" type="button"></button>
             <div class="popup">
                 <div class="popup__header">
                     <div class="lang-switcher">
                         <button class="lang-switcher__button" type="button">
-                            <img class="lang-switcher__lang-flag" src="./images/lang-ru.svg" alt="" />
-                            <p class="lang-switcher__lang-name">RU</p>
-                            <img class="lang-switcher__icon" src="./images/arrow-down.svg" alt="" />
+                            <img class="lang-switcher__lang-flag" src="./images/lang-ru.svg" alt="Флаг страны">
+                            <span class="lang-switcher__lang-name">RU</span>
+                            <img class="lang-switcher__icon" src="./images/arrow-down.svg" alt="Стрелка вниз">
                         </button>
                         <div class="lang-switcher__container">
                             <p class="lang-switcher__title">Страна</p>
                             <ul class="lang-switcher__list">
-                                <li class="lang" id="US"><img class="lang__flag" src="./images/lang-us.svg" alt="Флаг США" /><span
-                                        class="lang__name">United States</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
-                                <li class="lang" id="NL"><img class="lang__flag" src="./images/lang-nl.svg" alt="Флаг Нидерландов" /><span
-                                        class="lang__name">Netherlands</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
-                                <li class="lang" id="BY"><img class="lang__flag" src="./images/lang-by.svg" alt="Флаг Беларуси" /><span
-                                        class="lang__name">Беларусь</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
-                                <li class="lang lang_chosen" id="RU"><img class="lang__flag" src="./images/lang-ru.svg" alt="Флаг России" /><span
-                                        class="lang__name">Россия</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
-                                <li class="lang" id="KZ"><img class="lang__flag" src="./images/lang-kz.svg" alt="Флаг Казахстана" /><span
-                                        class="lang__name">Казахстан</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
-                                <li class="lang" id="TR"><img class="lang__flag" src="./images/lang-tr.svg" alt="Флаг Турции" /><span
-                                        class="lang__name">Türkiye</span><img class="lang__tick" src="./images/tick.svg" alt="Галочка" /></li>
+                                <li class="lang" id="US"><img class="lang__flag" src="./images/lang-us.svg"
+                                        alt="Флаг США"><span class="lang__name">United States</span><img
+                                        class="lang__tick" src="./images/tick.svg" alt="Галочка"></li>
+                                <li class="lang" id="NL"><img class="lang__flag" src="./images/lang-nl.svg"
+                                        alt="Флаг Нидерландов"><span class="lang__name">Netherlands</span><img
+                                        class="lang__tick" src="./images/tick.svg" alt="Галочка"></li>
+                                <li class="lang" id="BY"><img class="lang__flag" src="./images/lang-by.svg"
+                                        alt="Флаг Беларуси"><span class="lang__name">Беларусь</span><img
+                                        class="lang__tick" src="./images/tick.svg" alt="Галочка"></li>
+                                <li class="lang lang_chosen" id="RU"><img class="lang__flag" src="./images/lang-ru.svg"
+                                        alt="Флаг России"><span class="lang__name">Россия</span><img class="lang__tick"
+                                        src="./images/tick.svg" alt="Галочка"></li>
+                                <li class="lang" id="KZ"><img class="lang__flag" src="./images/lang-kz.svg"
+                                        alt="Флаг Казахстана"><span class="lang__name">Казахстан</span><img
+                                        class="lang__tick" src="./images/tick.svg" alt="Галочка"></li>
+                                <li class="lang" id="TR"><img class="lang__flag" src="./images/lang-tr.svg"
+                                        alt="Флаг Турции"><span class="lang__name">Türkiye</span><img class="lang__tick"
+                                        src="./images/tick.svg" alt="Галочка"></li>
                             </ul>
                         </div>
                     </div>
-                    <button class="popup__close-button"></button>
+                    <button class="popup__close-button" type="button"></button>
                 </div>
-                <section class="menu shown">
+                <div class="menu shown">
                     <ul class="menu__list">
-                        <li class="menu__item"><span>Services</span><img src="./images/arrow-right.svg" alt="" /></li>
-                        <li class="menu__item"><span>Managed IT</span><img src="./images/arrow-right.svg" alt="" />
+                        <li class="menu__item"><span>Services</span><img src="./images/arrow-right.svg"
+                                alt="Стрелка вправо"></li>
+                        <li class="menu__item"><span>Managed IT</span><img src="./images/arrow-right.svg"
+                                alt="Стрелка вправо">
                         </li>
                         <li class="menu__item"><span>Telecom Solutions</span><img src="./images/arrow-right.svg"
-                                alt="" />
+                                alt="Стрелка вправо">
                         </li>
-                        <li class="menu__item"><span>About Us</span><img src="./images/arrow-right.svg" alt="" /></li>
+                        <li class="menu__item"><span>About Us</span><img src="./images/arrow-right.svg"
+                                alt="Стрелка вправо"></li>
                     </ul>
                     <nav class="navigation">
                         <a class="navigation__link" href="#">Контакты</a>
-                        <button class="navigation__search-button">Поиск</button>
+                        <button class="navigation__search-button" type="button">Поиск</button>
                     </nav>
-                </section>
-                <section class="submenu">
-                    <button class="submenu__back-button"><img src="./images/arrow-left.svg" alt="" /><span
+                </div>
+                <div class="submenu">
+                    <button class="submenu__back-button" type="button"><img src="./images/arrow-left.svg" alt="Стрелка влево"><span
                             class="submenu__title"></span></button>
                     <ul class="submenu__list">
                         <li class="submenu__item"><span class="submenu__item-name">Облачные вычисления</span><img
-                                src="./images/arrow-right.svg" alt="" /></li>
+                                src="./images/arrow-right.svg" alt="Стрелка вправо"></li>
                         <li class="submenu__item"><span class="submenu__item-name">Выделенные серверы</span><img
-                                src="./images/arrow-right.svg" alt="" />
+                                src="./images/arrow-right.svg" alt="Стрелка вправо">
                         </li>
                         <li class="submenu__item"><span class="submenu__item-name">Платформенные сервисы</span><img
-                                src="./images/arrow-right.svg" alt="" /></li>
-                        <li class="submenu__item"><span class="submenu__item-name">Информационная безопасность</span><img src="./images/arrow-right.svg" alt="" /></li>
+                                src="./images/arrow-right.svg" alt="Стрелка вправо"></li>
+                        <li class="submenu__item"><span class="submenu__item-name">Информационная
+                                безопасность</span><img src="./images/arrow-right.svg" alt="Стрелка вправо"></li>
                     </ul>
-                </section>
-                <section class="results">
-                    <button class="results__back-button"><img src="./images/arrow-left.svg" alt="" /><span
+                </div>
+                <div class="results">
+                    <button class="results__back-button" type="button"><img src="./images/arrow-left.svg" alt="Стрелка влево"><span
                             class="results__title"></span></button>
                     <ul class="results__list">
                         <li class="result">
@@ -98,13 +108,8 @@
                             <p class="result__description">Relational database services for MySQL, PostgreSQL, and SQL
                                 server.</p>
                         </li>
-                        <li class="result">
-                            <p class="result__name">Multicloud</p>
-                            <p class="result__description">Relational database services for MySQL, PostgreSQL, and SQL
-                                server.</p>
-                        </li>
                     </ul>
-                </section>
+                </div>
             </div>
         </main>
     </div>
