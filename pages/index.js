@@ -5,6 +5,8 @@ const config = {
 
   // language switcher
   langButton: document.querySelector(".lang-switcher__button"),
+  langButtonName: document.querySelector(".lang-switcher__lang-name"),
+  langButtonFlag: document.querySelector(".lang-switcher__lang-flag"),
   langList: document.querySelector(".lang-switcher__container"),
   languages: [...document.querySelectorAll(".lang")],
 
@@ -49,6 +51,9 @@ const chooseLanguage = (e) => {
     currentLanguage.classList.remove("lang_chosen");
   }
   newLanguage.classList.add("lang_chosen");
+  config.langButtonFlag.src = newLanguage.querySelector(".lang__flag").src;
+  config.langButtonFlag.alt = newLanguage.querySelector(".lang__flag").alt;
+  config.langButtonName.innerText = newLanguage.id;
   closeLanguageList();
 };
 
