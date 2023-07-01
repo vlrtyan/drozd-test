@@ -46,9 +46,9 @@ const closeLanguageList = () => {
   config.langButton.classList.remove("lang-switcher__button_clicked");
 };
 
-const chooseLanguage = (e) => {
-  const currentLanguage = document.querySelector(".lang_chosen");
+const changeLanguage = (e) => {
   const newLanguage = e.currentTarget;
+  const currentLanguage = document.querySelector(".lang_chosen");
   if (currentLanguage) {
     currentLanguage.classList.remove("lang_chosen");
   }
@@ -70,36 +70,39 @@ const openSection = (section) => {
   section.classList.add("shown");
 };
 
-const clickMenuItem = (e) => {
-  config.submenuTitle.innerText = e.currentTarget.innerText;
-  openSection(config.submenu);
-};
-
-const clickSubmenuItem = (e) => {
-  config.resultsTitle.innerText = e.currentTarget.innerText;
-  openSection(config.results);
-};
-
 // adapt viewport height for mobile browsers
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
+// popup
 config.burgerButton.addEventListener("click", openPopup);
 config.closeButton.addEventListener("click", closePopup);
+
+// change language
 config.langButton.addEventListener("click", openLanguageList);
 config.popup.addEventListener("touchstart", (e) => {
   if (!e.target.closest(".lang-switcher")) {
     closeLanguageList();
   }
 });
+config.languages.map((lang) => lang.addEventListener("click", changeLanguage));
+
+// menu navigation
+config.menuItems.map((item) =>
+  item.addEventListener("click", (e) => {
+    config.submenuTitle.innerText = e.currentTarget.innerText;
+    openSection(config.submenu);
+  })
+);
+config.submenuItems.map((item) =>
+  item.addEventListener("click", (e) => {
+    config.resultsTitle.innerText = e.currentTarget.innerText;
+    openSection(config.results);
+  })
+);
 config.submenuBackButton.addEventListener("click", () => {
   openSection(config.menu);
 });
 config.resultsBackButton.addEventListener("click", () => {
   openSection(config.submenu);
 });
-config.menuItems.map((item) => item.addEventListener("click", clickMenuItem));
-config.submenuItems.map((item) =>
-  item.addEventListener("click", clickSubmenuItem)
-);
-config.languages.map((lang) => lang.addEventListener("click", chooseLanguage));

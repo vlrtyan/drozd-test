@@ -1,0 +1,9 @@
+.menu__item {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

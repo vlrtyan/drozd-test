@@ -1,0 +1,21 @@
+.results__list {
+    padding: 0;
+    padding-right: 23px;
+    margin: 0 5px 0 30px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* 100% - results title height */
+    max-height: calc(100% - 73px);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.results__list::-webkit-scrollbar {
+    width: 2px;
+}
+
+.results__list::-webkit-scrollbar-thumb {
+    background-color: #C6D6E5;
+    border-radius: 2px;
+}

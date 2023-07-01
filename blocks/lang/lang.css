@@ -1,0 +1,8 @@
+.lang {
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.5s;
+}

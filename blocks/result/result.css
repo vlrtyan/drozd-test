@@ -1,0 +1,5 @@
+.result {
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,10 @@
+.popup {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    visibility: hidden;
+    transition: all .5s ease-out;
+}

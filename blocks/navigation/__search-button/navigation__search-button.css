@@ -1,0 +1,9 @@
+.navigation__search-button {
+    color: #151617;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}

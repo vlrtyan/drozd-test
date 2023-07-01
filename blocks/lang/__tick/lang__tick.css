@@ -1,0 +1,8 @@
+.lang__tick {
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}

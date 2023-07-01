@@ -1,0 +1,6 @@
+.menu {
+    height: calc(100% - 123px);
+    position: relative;
+    margin-top: 77px;
+    display: none;
+}

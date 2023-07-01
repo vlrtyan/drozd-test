@@ -1,0 +1,12 @@
+.results__back-button {
+    width: 100%;
+    margin: 0 0 20px;
+    border: none;
+    border-bottom: 1px solid #C6D6E5;
+    background-color: transparent;
+    padding: 0 30px 20px 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+}

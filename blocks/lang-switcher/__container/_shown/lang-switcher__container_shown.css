@@ -1,0 +1,5 @@
+.lang-switcher__container_shown {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}

@@ -1,0 +1,13 @@
+.lang-switcher__container {
+    width: 180px;
+    padding: 6px 0;
+    margin-top: -2px;
+    position: absolute;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(116, 137, 155, 0.08), 0px 1px 18px 0px rgba(116, 137, 155, 0.04), 0px 6px 10px 0px rgba(116, 137, 155, 0.06);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}

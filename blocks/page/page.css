@@ -1,0 +1,14 @@
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+    min-width: 360px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #151617;
+    background-color: #C6D6E5;
+}
