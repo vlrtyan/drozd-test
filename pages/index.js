@@ -93,6 +93,7 @@ const openPopup = () => {
 const closePopup = () => {
   config.popup.classList.remove("popup_opened");
   hideAllSections();
+  closeLanguageList();
   openSection(config.menu);
 };
 
