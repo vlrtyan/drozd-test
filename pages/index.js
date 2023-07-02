@@ -97,7 +97,8 @@ const closePopup = () => {
   openSection(config.menu);
 };
 
-const getLanguageListItem = (id, country, flag, defaultLang) => {
+const getLanguageListItem = (lang) => {
+  const { id, country, flag, defaultLang } = lang;
   const langTemplate = document
     .querySelector("#templateLang")
     .content.querySelector(".lang")
@@ -120,13 +121,8 @@ window.onload = () => {
   config.closeButton.addEventListener("click", closePopup);
 
   // change language
-  languages.map((lang) => {
-    const item = getLanguageListItem(
-      lang.id,
-      lang.country,
-      lang.flag,
-      lang.default
-    );
+  languages.forEach((lang) => {
+    const item = getLanguageListItem(lang);
     document.querySelector(".lang-switcher__list").append(item);
     item.addEventListener("click", (e) => changeLanguage(e.currentTarget));
   });
@@ -138,13 +134,13 @@ window.onload = () => {
   });
 
   // menu navigation
-  config.menuItems.map((item) =>
+  config.menuItems.forEach((item) =>
     item.addEventListener("click", (e) => {
       config.submenuTitle.innerText = e.currentTarget.innerText;
       openSection(config.submenu);
     })
   );
-  config.submenuItems.map((item) =>
+  config.submenuItems.forEach((item) =>
     item.addEventListener("click", (e) => {
       config.resultsTitle.innerText = e.currentTarget.innerText;
       openSection(config.results);
