@@ -1,7 +1,21 @@
 .menu__list {
-    margin: 0 30px;
+    margin: 0 5px 0 30px;
     padding: 0;
+    padding-right: 23px;
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    row-gap: 20px;
+    /* 100% - navigation height */
+    max-height: calc(100% - 114px);
+    overflow-y: scroll;
+}
+
+.menu__list::-webkit-scrollbar {
+    width: 2px;
+}
+
+.menu__list::-webkit-scrollbar-thumb {
+    background-color: #C6D6E5;
+    border-radius: 2px;
 }

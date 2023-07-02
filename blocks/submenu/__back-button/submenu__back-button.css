@@ -7,10 +7,6 @@
     flex-direction: row;
     align-items: center;
     column-gap: 5px;
-    color: #151617;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 32px;
 }
 
 @media screen and (min-width: 1024px) {

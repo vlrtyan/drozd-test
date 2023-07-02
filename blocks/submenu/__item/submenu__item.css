@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 22px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,3 +1,5 @@
 .submenu {
     margin-top: 58px;
+    /* 100% - header - submenu margin-top */
+    height: calc(100% - 46px - 58px);
 }

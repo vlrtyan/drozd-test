@@ -8,7 +8,6 @@
     /* 100% - results title height */
     max-height: calc(100% - 73px);
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 .results__list::-webkit-scrollbar {
