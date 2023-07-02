@@ -1,6 +1,7 @@
 .lang_chosen {
     transition: 0.5s;
     background-color: #F1F8FE;
+    cursor: default;
 }
 
 .lang_chosen .lang__tick {

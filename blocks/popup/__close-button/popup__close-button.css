@@ -9,3 +9,14 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@media screen and (min-width: 1024px) {
+    .popup__close-button {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .popup__close-button:hover {
+        opacity: 0.5;
+    }
+}

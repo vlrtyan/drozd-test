@@ -9,3 +9,14 @@
     border-radius: 2px;
     transition: 0.3s;
 }
+
+@media screen and (min-width: 1024px) {
+    .lang-switcher__button {
+        cursor: pointer;
+    }
+
+    .lang-switcher__button:hover {
+        border: 2px solid rgba(131, 188, 255, 0.50);
+        background: rgba(29, 125, 237, 0.10);
+    }
+}

@@ -7,3 +7,14 @@
     border: none;
     background-color: transparent;
 }
+
+@media screen and (min-width: 1024px) {
+    .navigation__search-button {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .navigation__search-button:hover {
+        opacity: 0.5;
+    }
+}
