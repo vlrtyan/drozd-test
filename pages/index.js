@@ -63,8 +63,7 @@ const closeLanguageList = () => {
   config.langButton.classList.remove("lang-switcher__button_clicked");
 };
 
-const changeLanguage = (e) => {
-  const newLanguage = e.currentTarget;
+const changeLanguage = (newLanguage) => {
   const currentLanguage = document.querySelector(".lang_chosen");
   if (currentLanguage) {
     currentLanguage.classList.remove("lang_chosen");
@@ -98,16 +97,16 @@ const closePopup = () => {
 };
 
 const getLanguageListItem = (id, country, flag, defaultLang) => {
-  const langTempate = document
+  const langTemplate = document
     .querySelector("#templateLang")
     .content.querySelector(".lang")
     .cloneNode(true);
-  langTempate.id = id;
-  langTempate.querySelector(".lang__name").innerText = country;
-  langTempate.querySelector(".lang__flag").src = flag;
-  langTempate.querySelector(".lang__flag").alt = country;
-  defaultLang && langTempate.classList.add("lang_chosen");
-  return langTempate;
+  langTemplate.id = id;
+  langTemplate.querySelector(".lang__name").innerText = country;
+  langTemplate.querySelector(".lang__flag").src = flag;
+  langTemplate.querySelector(".lang__flag").alt = country;
+  defaultLang && changeLanguage(langTemplate);
+  return langTemplate;
 };
 
 // adapt viewport height for mobile browsers
@@ -128,10 +127,10 @@ window.onload = () => {
       lang.default
     );
     document.querySelector(".lang-switcher__list").append(item);
-    item.addEventListener("click", changeLanguage);
+    item.addEventListener("click", (e) => changeLanguage(e.currentTarget));
   });
   config.langButton.addEventListener("click", openLanguageList);
-  config.popup.addEventListener("click", (e) => {
+  config.popup.addEventListener("touchstart", (e) => {
     if (!e.target.closest(".lang-switcher")) {
       closeLanguageList();
     }
