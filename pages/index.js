@@ -29,28 +29,33 @@ const languages = [
     id: "US",
     country: "United States",
     flag: "images/lang-us.svg",
-    default: false,
+    isDefault: false,
   },
   {
     id: "NL",
     country: "Netherlands",
     flag: "images/lang-nl.svg",
-    default: false,
+    isDefault: false,
   },
   {
     id: "BY",
     country: "Беларусь",
     flag: "images/lang-by.svg",
-    default: false,
+    isDefault: false,
   },
-  { id: "RU", country: "Россия", flag: "images/lang-ru.svg", default: true },
+  { id: "RU", country: "Россия", flag: "images/lang-ru.svg", isDefault: true },
   {
     id: "KZ",
     country: "Казахстан",
     flag: "images/lang-kz.svg",
-    default: false,
+    isDefault: false,
   },
-  { id: "TR", country: "Türkiye", flag: "images/lang-tr.svg", default: false },
+  {
+    id: "TR",
+    country: "Türkiye",
+    flag: "images/lang-tr.svg",
+    isDefault: false,
+  },
 ];
 
 const openLanguageList = () => {
@@ -65,14 +70,14 @@ const closeLanguageList = () => {
 
 const changeLanguage = (newLanguage) => {
   const currentLanguage = document.querySelector(".lang_chosen");
-  if (currentLanguage) {
-    currentLanguage.classList.remove("lang_chosen");
+  if (currentLanguage !== newLanguage) {
+    currentLanguage && currentLanguage.classList.remove("lang_chosen");
+    newLanguage.classList.add("lang_chosen");
+    config.langButtonFlag.src = newLanguage.querySelector(".lang__flag").src;
+    config.langButtonFlag.alt = newLanguage.querySelector(".lang__flag").alt;
+    config.langButtonName.innerText = newLanguage.id;
+    closeLanguageList();
   }
-  newLanguage.classList.add("lang_chosen");
-  config.langButtonFlag.src = newLanguage.querySelector(".lang__flag").src;
-  config.langButtonFlag.alt = newLanguage.querySelector(".lang__flag").alt;
-  config.langButtonName.innerText = newLanguage.id;
-  closeLanguageList();
 };
 
 const hideAllSections = () => {
@@ -98,7 +103,7 @@ const closePopup = () => {
 };
 
 const getLanguageListItem = (lang) => {
-  const { id, country, flag, defaultLang } = lang;
+  const { id, country, flag, isDefault } = lang;
   const langTemplate = document
     .querySelector("#templateLang")
     .content.querySelector(".lang")
@@ -107,7 +112,7 @@ const getLanguageListItem = (lang) => {
   langTemplate.querySelector(".lang__name").innerText = country;
   langTemplate.querySelector(".lang__flag").src = flag;
   langTemplate.querySelector(".lang__flag").alt = country;
-  defaultLang && changeLanguage(langTemplate);
+  isDefault && changeLanguage(langTemplate);
   return langTemplate;
 };
 
@@ -123,8 +128,8 @@ window.onload = () => {
   // change language
   for (let lang of languages) {
     const item = getLanguageListItem(lang);
-    document.querySelector(".lang-switcher__list").append(item);
     item.addEventListener("click", (e) => changeLanguage(e.currentTarget));
+    document.querySelector(".lang-switcher__list").append(item);
   }
 
   config.langButton.addEventListener("click", openLanguageList);
