@@ -114,44 +114,46 @@ const getLanguageListItem = (id, country, flag, defaultLang) => {
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-// popup
-config.burgerButton.addEventListener("click", openPopup);
-config.closeButton.addEventListener("click", closePopup);
+window.onload = () => {
+  // popup
+  config.burgerButton.addEventListener("click", openPopup);
+  config.closeButton.addEventListener("click", closePopup);
 
-// change language
-languages.map((lang) => {
-  const item = getLanguageListItem(
-    lang.id,
-    lang.country,
-    lang.flag,
-    lang.default
+  // change language
+  languages.map((lang) => {
+    const item = getLanguageListItem(
+      lang.id,
+      lang.country,
+      lang.flag,
+      lang.default
+    );
+    document.querySelector(".lang-switcher__list").append(item);
+    item.addEventListener("click", changeLanguage);
+  });
+  config.langButton.addEventListener("click", openLanguageList);
+  config.popup.addEventListener("click", (e) => {
+    if (!e.target.closest(".lang-switcher")) {
+      closeLanguageList();
+    }
+  });
+
+  // menu navigation
+  config.menuItems.map((item) =>
+    item.addEventListener("click", (e) => {
+      config.submenuTitle.innerText = e.currentTarget.innerText;
+      openSection(config.submenu);
+    })
   );
-  document.querySelector(".lang-switcher__list").append(item);
-  item.addEventListener("click", changeLanguage);
-});
-config.langButton.addEventListener("click", openLanguageList);
-config.popup.addEventListener("click", (e) => {
-  if (!e.target.closest(".lang-switcher")) {
-    closeLanguageList();
-  }
-});
-
-// menu navigation
-config.menuItems.map((item) =>
-  item.addEventListener("click", (e) => {
-    config.submenuTitle.innerText = e.currentTarget.innerText;
+  config.submenuItems.map((item) =>
+    item.addEventListener("click", (e) => {
+      config.resultsTitle.innerText = e.currentTarget.innerText;
+      openSection(config.results);
+    })
+  );
+  config.submenuBackButton.addEventListener("click", () => {
+    openSection(config.menu);
+  });
+  config.resultsBackButton.addEventListener("click", () => {
     openSection(config.submenu);
-  })
-);
-config.submenuItems.map((item) =>
-  item.addEventListener("click", (e) => {
-    config.resultsTitle.innerText = e.currentTarget.innerText;
-    openSection(config.results);
-  })
-);
-config.submenuBackButton.addEventListener("click", () => {
-  openSection(config.menu);
-});
-config.resultsBackButton.addEventListener("click", () => {
-  openSection(config.submenu);
-});
+  });
+};
