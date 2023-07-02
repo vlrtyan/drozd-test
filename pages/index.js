@@ -1,10 +1,3 @@
-import flagUS from "../images/lang-us.svg";
-import flagNL from "../images/lang-nl.svg";
-import flagBY from "../images/lang-by.svg";
-import flagRU from "../images/lang-ru.svg";
-import flagKZ from "../images/lang-kz.svg";
-import flagTR from "../images/lang-tr.svg";
-
 const config = {
   burgerButton: document.querySelector(".burger-button"),
   closeButton: document.querySelector(".popup__close-button"),
@@ -35,29 +28,29 @@ const languages = [
   {
     id: "US",
     country: "United States",
-    flag: flagUS,
+    flag: "images/lang-us.svg",
     default: false,
   },
   {
     id: "NL",
     country: "Netherlands",
-    flag: flagNL,
+    flag: "images/lang-nl.svg",
     default: false,
   },
   {
     id: "BY",
     country: "Беларусь",
-    flag: flagBY,
+    flag: "images/lang-by.svg",
     default: false,
   },
-  { id: "RU", country: "Россия", flag: flagRU, default: true },
+  { id: "RU", country: "Россия", flag: "images/lang-ru.svg", default: true },
   {
     id: "KZ",
     country: "Казахстан",
-    flag: flagKZ,
+    flag: "images/lang-kz.svg",
     default: false,
   },
-  { id: "TR", country: "Türkiye", flag: flagTR, default: false },
+  { id: "TR", country: "Türkiye", flag: "images/lang-tr.svg", default: false },
 ];
 
 const openLanguageList = () => {
