@@ -28,29 +28,29 @@ const languages = [
   {
     id: "US",
     country: "United States",
-    flag: "/images/lang-us.svg",
+    flag: "./images/lang-us.svg",
     default: false,
   },
   {
     id: "NL",
     country: "Netherlands",
-    flag: "/images/lang-nl.svg",
+    flag: "./images/lang-nl.svg",
     default: false,
   },
   {
     id: "BY",
     country: "Беларусь",
-    flag: "/images/lang-by.svg",
+    flag: "./images/lang-by.svg",
     default: false,
   },
-  { id: "RU", country: "Россия", flag: "/images/lang-ru.svg", default: true },
+  { id: "RU", country: "Россия", flag: "./images/lang-ru.svg", default: true },
   {
     id: "KZ",
     country: "Казахстан",
-    flag: "/images/lang-kz.svg",
+    flag: "./images/lang-kz.svg",
     default: false,
   },
-  { id: "TR", country: "Türkiye", flag: "/images/lang-tr.svg", default: false },
+  { id: "TR", country: "Türkiye", flag: "./images/lang-tr.svg", default: false },
 ];
 
 const openLanguageList = () => {
