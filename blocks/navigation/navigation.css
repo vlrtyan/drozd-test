@@ -1,7 +1,5 @@
 .navigation {
-    position: absolute;
-    bottom: 0;
-    margin: 0 38px 30px 30px;
+    margin: auto 38px 30px 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -1,6 +1,5 @@
 .results {
     margin-top: 58px;
-    display: none;
     /* 100% - header - results margin-top */
     height: calc(100% - 46px - 58px);
 }

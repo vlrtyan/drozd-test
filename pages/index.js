@@ -26,16 +26,6 @@ const config = {
   resultsBackButton: document.querySelector(".results__back-button"),
 };
 
-const openPopup = () => {
-  config.popup.classList.add("popup_opened");
-};
-
-const closePopup = () => {
-  config.popup.classList.remove("popup_opened");
-  hideAllSections();
-  openSection(config.menu);
-};
-
 const openLanguageList = () => {
   config.langList.classList.toggle("lang-switcher__container_shown");
   config.langButton.classList.toggle("lang-switcher__button_clicked");
@@ -60,14 +50,24 @@ const changeLanguage = (e) => {
 };
 
 const hideAllSections = () => {
-  config.menu.classList.remove("shown");
-  config.submenu.classList.remove("shown");
-  config.results.classList.remove("shown");
+  config.menu.classList.add("hidden");
+  config.submenu.classList.add("hidden");
+  config.results.classList.add("hidden");
 };
 
 const openSection = (section) => {
   hideAllSections();
-  section.classList.add("shown");
+  section.classList.remove("hidden");
+};
+
+const openPopup = () => {
+  config.popup.classList.add("popup_opened");
+};
+
+const closePopup = () => {
+  config.popup.classList.remove("popup_opened");
+  hideAllSections();
+  openSection(config.menu);
 };
 
 // adapt viewport height for mobile browsers
@@ -106,3 +106,4 @@ config.submenuBackButton.addEventListener("click", () => {
 config.resultsBackButton.addEventListener("click", () => {
   openSection(config.submenu);
 });
+
