@@ -1,5 +1,7 @@
 .submenu__item-name {
     font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
     line-height: 30px;
     max-width: 280px;
 }
