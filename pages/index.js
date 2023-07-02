@@ -121,11 +121,12 @@ window.onload = () => {
   config.closeButton.addEventListener("click", closePopup);
 
   // change language
-  languages.forEach((lang) => {
+  for (let lang of languages) {
     const item = getLanguageListItem(lang);
     document.querySelector(".lang-switcher__list").append(item);
     item.addEventListener("click", (e) => changeLanguage(e.currentTarget));
-  });
+  }
+
   config.langButton.addEventListener("click", openLanguageList);
   config.popup.addEventListener("touchstart", (e) => {
     if (!e.target.closest(".lang-switcher")) {
@@ -134,18 +135,20 @@ window.onload = () => {
   });
 
   // menu navigation
-  config.menuItems.forEach((item) =>
+  for (let item of config.menuItems) {
     item.addEventListener("click", (e) => {
       config.submenuTitle.innerText = e.currentTarget.innerText;
       openSection(config.submenu);
-    })
-  );
-  config.submenuItems.forEach((item) =>
+    });
+  }
+
+  for (let item of config.submenuItems) {
     item.addEventListener("click", (e) => {
       config.resultsTitle.innerText = e.currentTarget.innerText;
       openSection(config.results);
-    })
-  );
+    });
+  }
+
   config.submenuBackButton.addEventListener("click", () => {
     openSection(config.menu);
   });
